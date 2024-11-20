@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Club Regristation Form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0 auto;
+        }
+        body{
+            background-color: #eee;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color: white;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 10px 15px 50px rgba(159, 157, 157, 0.542);
+        }
+        .header{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header > h1{
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .header > p{
+            font-size: 14px;
+            color: #666;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border-radius: 9px;
+            border-color: #666;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .password{
+            margin-bottom: 0px;
+        }
+        .checkbox{
+            margin: 0px;
+            padding: 0;
+            border-radius: 0px;
+        }
+        .star{
+            color: red;
+        }
+        .faded1{
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .faded2{
+            color: #666;
+        }
+        textarea{
+            border-radius: 9px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        select{
+            width: 100%;
+            padding: 10px 0px;
+            margin-top: 10px;
+            border-radius: 9px;
+        }
+        .submit{
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            margin-bottom: 0px;
+        }
+        .terms-group{
+            display: flex;
+        }
+        .checkbox-item{
+            padding: 1px;
+            margin-left: 1px;
+            margin-right: 10px;
+            margin-top: 20px;
+            color: #666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create Account</h1>
+            <p>Fill in the details to get started</p>
+        </div>
+        <form>
+            <label for="name">Full Name <span class="star">*</span></label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <br>
+            <label for="email">Email Address <span class="star">*</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <br>
+            <label for="password">Password <span class="star">*</label>
+            <br>
+            <input class="password" type="password" name="password" id="password" required>
+            <p class="faded1">Must be at least 8 characters long</p>
+            <label for="role">Role</label>
+            <br>
+            <select name="role" id="role">
+                <option value="select">Select a role</option>
+                <option value="first">Role 1</option>
+                <option value="second">Role 2</option>
+                <option value="third">Role 3</option>
+            </select>
+            <br>
+            <label for="bio">Bio</label>
+            <br>
+            <textarea id="bio" name="bio" rows="7" placeholder="Tell us about yourself"></textarea>
+            <p class="faded2">Keep it short and sweet</p>
+            <div class="terms-group">
+                <div class="checkbox-item">
+                    <input class="checkbox" type="checkbox" required>
+                </div>
+                <div class="checkbox-item">
+                    <label>I agree to the terms and conditions <span class="star">*</span></label>
+                </div>
+            </div>
+            <br>
+            <input class="submit" type="submit" value="Create Account">
+        </form>
+    </div>
+</body>
+</html>
